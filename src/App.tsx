@@ -1,14 +1,14 @@
 import './App.css';
-import { UserContextProvider } from './components/context/UserContext';
-import { User } from './components/context/User';
-import { DomRef } from './components/ref/DomRef';
-import { MutableRef } from './components/ref/MutableRef';
-import Counter from './components/class/Counter';
+import { Private } from './components/auth/Private';
+import { Profile } from './components/auth/Profile';
+import { List } from './components/generics/List';
 
 function App() {
    return (
     <div className="App">
-       <Counter message='The count value is ' />
+      <List items={['Batman','Superman','Wonder Woman']} onClick={(item)=>console.log(item)} />
+      <List items={[1,2,3]} onClick={(item)=>console.log(item)} />
+      <List items={[{name:'e'},{name:'e'},{name:'e'}]} onClick={(item)=>console.log(item)} />
     </div>
   );
 }
